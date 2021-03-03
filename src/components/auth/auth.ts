@@ -9,7 +9,7 @@ import { refreshKeycloakAccessToken } from '../sessionCookie/refreshKeycloakAcce
 
 export const RENEW_BEFORE_EXPIRY_IN_MS = 10 * 1000; // seconds
 
-export const setTokens = (data: LoginData) => {
+export const setTokens = (data: LoginData): Promise<void> => {
 	if (data.access_token) {
 		setTokenInCookie('keycloak', data.access_token);
 		setTokenExpiryInLocalStorage(
@@ -24,6 +24,8 @@ export const setTokens = (data: LoginData) => {
 			data.refresh_expires_in
 		);
 	}
+
+	return Promise.resolve();
 };
 
 const refreshTokens = (): Promise<void> => {

@@ -33,35 +33,35 @@ export const autoLogin = (autoLoginProps: {
 		encodeURIComponent(autoLoginProps.password)
 	)
 		.then((response) => {
-			setTokens(response);
+			setTokens(response).then(() => {
+				getRocketchatAccessToken(userHash, autoLoginProps.password)
+					.then((response) => {
+						const data = response.data;
+						if (data.authToken) {
+							setTokenInCookie('rc_token', data.authToken);
+						}
+						if (data.userId) {
+							setTokenInCookie('rc_uid', data.userId);
+						}
 
-			getRocketchatAccessToken(userHash, autoLoginProps.password)
-				.then((response) => {
-					const data = response.data;
-					if (data.authToken) {
-						setTokenInCookie('rc_token', data.authToken);
-					}
-					if (data.userId) {
-						setTokenInCookie('rc_uid', data.userId);
-					}
+						//generate new csrf token for current session
+						generateCsrfToken(true);
+						if (autoLoginProps.redirect) {
+							redirectToApp();
+						}
 
-					//generate new csrf token for current session
-					generateCsrfToken(true);
-					if (autoLoginProps.redirect) {
-						redirectToApp();
-					}
-
-					if (autoLoginProps.handleLoginSuccess) {
-						autoLoginProps.handleLoginSuccess();
-					}
-				})
-				.catch((error) => {
-					if (autoLoginProps.handleLoginError) {
-						autoLoginProps.handleLoginError();
-					} else {
-						console.error(error);
-					}
-				});
+						if (autoLoginProps.handleLoginSuccess) {
+							autoLoginProps.handleLoginSuccess();
+						}
+					})
+					.catch((error) => {
+						if (autoLoginProps.handleLoginError) {
+							autoLoginProps.handleLoginError();
+						} else {
+							console.error(error);
+						}
+					});
+			});
 		})
 		.catch((error) => {
 			if (autoLoginProps.useOldUser) {
