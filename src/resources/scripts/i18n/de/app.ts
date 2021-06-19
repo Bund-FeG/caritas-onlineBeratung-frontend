@@ -1,5 +1,5 @@
 const app = {
-	title: 'Beratung & Hilfe',
+	title: 'Café Seelsorge',
 	claim: 'Online. Anonym. Sicher.',
 	save: 'Speichern',
 	logout: 'Abmelden'

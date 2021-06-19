@@ -1,12 +1,6 @@
 import * as React from 'react';
 import { translate } from '../../resources/scripts/i18n/translate';
-import { ReactComponent as SkfLogo } from '../../resources/img/logos/01_skf.svg';
-import { ReactComponent as CaritasLogo } from '../../resources/img/logos/02_caritas.svg';
-import { ReactComponent as SkmLogo } from '../../resources/img/logos/03_skm.svg';
-import { ReactComponent as InViaLogo } from '../../resources/img/logos/04_via.svg';
-import { ReactComponent as KreuzbundLogo } from '../../resources/img/logos/05_kreuzbund.svg';
-import { ReactComponent as RaphaelswerkLogo } from '../../resources/img/logos/06_raphael.svg';
-import { ReactComponent as MalteserLogo } from '../../resources/img/logos/07_malteser.svg';
+import { ReactComponent as BujuLogo } from '../../resources/img/logos/logo-feg-jugend.svg';
 import './stage.styles';
 
 export interface StageProps {
@@ -32,13 +26,7 @@ export const Stage = (props: StageProps) => {
 			) : null}
 
 			<div className="stage__logos">
-				<SkfLogo />
-				<CaritasLogo />
-				<SkmLogo />
-				<MalteserLogo />
-				<KreuzbundLogo />
-				<RaphaelswerkLogo />
-				<InViaLogo />
+				<BujuLogo />
 			</div>
 		</div>
 	);

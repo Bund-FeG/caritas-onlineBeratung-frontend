@@ -7,8 +7,8 @@ const login = {
 	'button.label': 'Anmelden',
 	'resetPasswort.label': 'Passwort vergessen?',
 	'register.infoText.title': 'Noch nicht registriert?',
-	'register.infoText.copy': 'Wir beraten Sie gerne zu folgenden Themen:',
-	'register.linkLabel': 'Zur Übersicht',
+	'register.infoText.copy': ' ',
+	'register.linkLabel': 'Registrieren',
 	'legal.infoText.impressum':
 		'<a href="https://www.caritas.test/impressum" target="_blank">Impressum</a>',
 	'legal.infoText.dataprotection':
