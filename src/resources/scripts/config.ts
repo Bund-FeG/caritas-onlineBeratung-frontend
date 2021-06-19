@@ -52,21 +52,21 @@ export const config = {
 			'https://seelsorge.buju.org/allgemeine-soziale-beratung/registration',
 		toLogin: tld + endpointPort + '/login.html',
 		redirectToApp: tld + endpointPort + `/beratung-hilfe.html`,
-		caritas: 'https://www.caritas.de',
-		caritasImprint: 'https://www.caritas.de/impressum',
+		caritas: 'https://www.caritas.test',
+		caritasImprint: 'https://www.caritas.test/impressum',
 		caritasDataprotection:
-			'https://www.caritas.de/hilfeundberatung/onlineberatung/datenschutz',
+			'https://www.caritas.test/hilfeundberatung/onlineberatung/datenschutz',
 		error500: tld + endpointPort + '/error.500.html',
 		error401: tld + endpointPort + '/error.401.html',
 		error404: tld + endpointPort + '/error.404.html',
-		toU25Helpmail: 'https://www.u25.de/helpmail/',
+		toU25Helpmail: 'https://www.u25.test/helpmail/',
 		registrationDisabilityPostcodeFallback:
-			'https://www.caritas.de/hilfeundberatung/onlineberatung/behinderung-und-psychische-erkrankung/adressen',
+			'https://www.caritas.test/hilfeundberatung/onlineberatung/behinderung-und-psychische-erkrankung/adressen',
 		registrationMigrationPostcodeFallback:
-			'https://www.caritas.de/hilfeundberatung/onlineberatung/migration/adressen',
+			'https://www.caritas.test/hilfeundberatung/onlineberatung/migration/adressen',
 		registrationHospicePostcodeFallback:
-			'https://www.caritas.de/hilfeundberatung/onlineberatung/hospiz-palliativ/adressen',
+			'https://www.caritas.test/hilfeundberatung/onlineberatung/hospiz-palliativ/adressen',
 		registrationMenPostcodeFallback:
-			'https://www.skmev.de/beratung-hilfe/jungen-und-maennerarbeit/'
+			'https://www.skmev.test/beratung-hilfe/jungen-und-maennerarbeit/'
 	}
 };
