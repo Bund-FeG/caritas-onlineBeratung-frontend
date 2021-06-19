@@ -1,4 +1,4 @@
-var https = require('http');
+var https = require('https');
 require('dotenv').config({ path: './.env' });
 
 const postData = {
@@ -21,7 +21,7 @@ const serialize = (obj) => {
 
 const options = {
 	hostname: 'seelsorge.buju.org',
-	port: 80,
+	port: 443,
 	path: '/auth/realms/caritas-online-beratung/protocol/openid-connect/token',
 	method: 'POST',
 	headers: {
@@ -58,7 +58,7 @@ function setMasterKey(access_token, url) {
 	);
 	const options = {
 		hostname: 'seelsorge.buju.org',
-		port: 80,
+		port: 443,
 		path: url,
 		method: 'POST',
 		headers: {
