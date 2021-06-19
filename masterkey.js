@@ -20,7 +20,7 @@ const serialize = (obj) => {
 };
 
 const options = {
-	hostname: 'caritas.local',
+	hostname: 'seelsorge.buju.org',
 	port: 80,
 	path: '/auth/realms/caritas-online-beratung/protocol/openid-connect/token',
 	method: 'POST',
@@ -57,7 +57,7 @@ function setMasterKey(access_token, url) {
 			: 'no key defined -> please define your key in .env `MASTERKEY=YOURKEY`'
 	);
 	const options = {
-		hostname: 'caritas.local',
+		hostname: 'seelsorge.buju.org',
 		port: 80,
 		path: url,
 		method: 'POST',

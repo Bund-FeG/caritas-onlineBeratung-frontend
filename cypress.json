@@ -1,5 +1,5 @@
 {
-	"baseUrl": "http://caritas.local:9000",
+	"baseUrl": "https://seelsorge.buju.org",
 	"pluginsFile": false,
 	"chromeWebSecurity": false,
 	"viewportWidth": 1200,
