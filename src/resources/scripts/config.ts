@@ -49,7 +49,7 @@ export const config = {
 	},
 	urls: {
 		loginRedirectToRegistrationOverview:
-			'https://www.caritas.de/onlineberatung',
+			'https://seelsorge.buju.org/allgemeine-soziale-beratung/registration',
 		toLogin: tld + endpointPort + '/login.html',
 		redirectToApp: tld + endpointPort + `/beratung-hilfe.html`,
 		caritas: 'https://www.caritas.de',
